@@ -17,4 +17,13 @@ So, you may use client (webapp.)
 -------Terminal
 cd webapp
 yarn
+yarn dev
+
+---Token Address
+at src/pages/index.tsx
+you will change the "const contractAddress=" section
+
+
+------->After I will to be run by hardhat!!!
+Thank you.
 

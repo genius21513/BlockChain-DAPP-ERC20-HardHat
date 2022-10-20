@@ -10,6 +10,7 @@ import ReadERC20 from 'components/ReadERC20'
 import TransferERC20 from 'components/TransferERC20'
 
 const Home: NextPage = () => {
+  const contractAddress = '0x41a79b0F57733632f80cCE1a328ACFC640642B6e'
   const [balance, setBalance] = useState<string | undefined>()
   const [currentAccount, setCurrentAccount] = useState<string | undefined>()
   const [chainId, setChainId] = useState<number | undefined>()
@@ -75,7 +76,7 @@ const Home: NextPage = () => {
         <Box mb={0} p={4} w='100%' borderWidth="1px" borderRadius="lg">
           <Heading my={4} fontSize='xl'>Read ClassToken Info</Heading>
           <ReadERC20
-            addressContract='0x41a79b0F57733632f80cCE1a328ACFC640642B6e'
+            addressContract={contractAddress}
             currentAccount={currentAccount}
           />
         </Box>
@@ -94,7 +95,7 @@ const Home: NextPage = () => {
         <Box  mb={0} p={4} w='100%' borderWidth="1px" borderRadius="lg">
           <Heading my={4}  fontSize='xl'>Transfer Classtoken</Heading>
           <TransferERC20 
-            addressContract='0x41a79b0F57733632f80cCE1a328ACFC640642B6e'
+            addressContract={contractAddress}
             currentAccount={currentAccount}
           />
         </Box>
